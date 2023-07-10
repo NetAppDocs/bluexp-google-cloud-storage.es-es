@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-change-gcp-bucket-settings.html 
+keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets 
+summary: Una vez que tu entorno de trabajo de Google Cloud Storage esté disponible en Canvas, puedes cambiar algunas propiedades de bucket directamente desde BlueXP. 
+---
+= Cambia la configuración del bucket de Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una vez que tu entorno de trabajo de Google Cloud Storage esté disponible en Canvas, puedes cambiar algunas propiedades de bucket directamente desde BlueXP.
+
+Tenga en cuenta que no puede cambiar el nombre del depósito, el proyecto de Google ni la configuración de protección.
+
+Las propiedades de bloque que puede cambiar incluyen:
+
+* Clase de almacenamiento para todos los objetos futuros del cubo.
+* Puede optar por agregar, editar y eliminar etiquetas a los objetos del depósito.
+* Modo de replicación turbo: Solo si el depósito se encuentra en una ubicación de doble región.
+
+
+Puede cambiar esta configuración de bloque directamente desde BlueXP haciendo clic en image:button-horizontal-more.gif["el botón más de tres puntos"] > *Editar detalles del cubo* para un cubo.
+
+image:screenshot-edit-gcp-bucket.png["Una captura de pantalla que muestra cómo seleccionar el botón Editar Detalles de Bloque para editar las propiedades del bloque."]
+
+
+
+== Cambie la clase de almacenamiento
+
+La sección Clase de almacenamiento permite realizar solo ciertos cambios:
+
+* Si se seleccionó _Autoclass_ al crear el depósito, puede desactivar Autoclass y seleccionar otra clase de almacenamiento.
+* Si se seleccionó cualquier otra clase de almacenamiento al crear el depósito, puede cambiar a cualquier otra clase de almacenamiento, excepto _Autoclass_.
+
+
+Los objetos que estaban en una clase diferente permanecerán en esa clase, pero cualquier objeto nuevo utilizará la nueva configuración de clase.
+
+
+
+== Agregue o cambie las etiquetas de los objetos del depósito
+
+Las etiquetas son metadatos que puede utilizar para agrupar recursos para identificar aplicaciones, entornos, regiones, proveedores de nube, etc. Las etiquetas consisten en una clave y un valor. Puede agregar etiquetas a un depósito para que las etiquetas se apliquen a los objetos cuando se agreguen al depósito. También puede cambiar y eliminar etiquetas y valores de etiqueta.
+
+Después de agregar o editar una etiqueta, haga clic en *Aplicar* para guardar los cambios. Si quieres añadir más etiquetas, haz clic en *Añadir nueva etiqueta*. Puede agregar hasta 10 etiquetas por cubo.
+
+
+
+== Cambie si la replicación turbo está activada en ubicaciones de dos regiones
+
+Si el depósito se encuentra en una ubicación de doble región, puede activar o desactivar si el modo de replicación turbo está activado o desactivado. La «replicación turbo» le permite garantizar la redundancia geográfica de todos los objetos recién escritos en un objetivo de 15 minutos.
+
+No se pueden cambiar otros detalles de ubicación después de crear el depósito.

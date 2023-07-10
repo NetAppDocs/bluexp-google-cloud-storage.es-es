@@ -1,0 +1,151 @@
+---
+sidebar: sidebar 
+permalink: task-add-gcp-bucket.html 
+keywords: google cloud storage buckets, google cloud storage, add buckets 
+summary: Cuando tu entorno de trabajo de Google Cloud Storage esté disponible en Canvas, puedes añadir bloques adicionales directamente desde BlueXP. 
+---
+= Añada buckets de Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando tu entorno de trabajo de Google Cloud Storage esté disponible en Canvas, puedes añadir bloques adicionales directamente desde BlueXP.
+
+.Pasos
+. En Canvas, haz doble clic en el entorno de trabajo de Google Cloud Storage para ver la página de descripción general de los cubos de Google Cloud Storage y haz clic en *Agregar cubo*.
++
+image:screenshot-add-gcp-bucket-button.png["Una captura de pantalla que muestra los detalles de un entorno de trabajo de Google Cloud Storage y el botón Agregar cubo."]
+
++
+Se muestra la página _Add bucket_.
+
++
+image:screenshot-add-gcp-bucket.png["Una captura de pantalla que muestra la página Agregar cubo para que puedas crear tu propio depósito de Google Cloud Storage."]
+
+. Introduzca la información necesaria en la sección _Detalles del proyecto_.
++
+[cols="25,75"]
+|===
+| Campo | Descripción 
+
+
+| Nombre del bloque | Introduzca el nombre que desea utilizar para el bloque. https://cloud.google.com/storage/docs/buckets#naming["Consulte la documentación de Google Cloud para ver los requisitos de nomenclatura"^]. 
+
+
+| Proyecto de Google  a| 
+Seleccione el proyecto de Google que será el propietario del cubo. Este puede ser el proyecto principal en el que se desplegó el conector, o puede ser un proyecto diferente.
+
+Si no ve ningún proyecto adicional en la lista desplegable, aún no ha asociado la cuenta de servicio de BlueXP a otros proyectos. Vaya a la consola de Google Cloud, abra el servicio IAM y seleccione el proyecto. Agregue la cuenta de servicio con la función BlueXP a ese proyecto. Deberá repetir este paso con cada proyecto.
+
+
+NOTE: Esta es la cuenta de servicio que configuró para BlueXP, https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["como se describe en esta página"^].
+
+
+
+| Etiquetas  a| 
+Las etiquetas son metadatos para sus recursos de Google Cloud. Puede agregar hasta 10 pares clave:valor de etiqueta al crear un cubo.
+
+https://cloud.google.com/compute/docs/labeling-resources["Consulta la documentación de Google Cloud para obtener más información sobre las etiquetas"^].
+
+|===
+. En la sección _Location_, seleccione el tipo de ubicación y la región (o regiones) donde se creará el cubo. Puede seleccionar entre tres tipos diferentes de ubicaciones.
++
+[cols="35,65"]
+|===
+| Si selecciona el tipo de ubicación... | A continuación, seleccione... 
+
+
+| Región | Una única región del campo «Regiones disponibles». 
+
+
+| De doble región  a| 
+La ubicación geográfica (un único continente) del campo “Ubicaciones disponibles” y, a continuación, seleccione dos regiones en el campo “Regiones disponibles”.
+
+Puede activar la «replicación turbo» si desea garantizar la redundancia geográfica de todos los objetos recién escritos en un destino de 15 minutos.
+
+
+
+| Varias regiones | La región geográfica múltiple del campo multirregión disponible. 
+|===
++
+Tenga en cuenta que todos los datos de Cloud Storage son redundantes en al menos dos zonas dentro de al menos un lugar geográfico tan pronto como los cargue. https://cloud.google.com/storage/docs/locations["Consulta la documentación de Google Cloud para obtener más información sobre las ubicaciones de los cubos"^].
+
+. En la sección _Storage class_, seleccione la clase de almacenamiento que se utilizará para los objetos del depósito. Puede seleccionar entre cuatro clases de almacenamiento, o puede seleccionar _Autoclass_ para que Google ajuste la clase según sea necesario.
++
+[cols="25,75"]
+|===
+| Clase de almacenamiento | Descripción 
+
+
+| Estándar | El almacenamiento estándar es la mejor opción para datos a los que se accede con frecuencia (datos «activos») o que se almacenan únicamente durante breves períodos de tiempo. 
+
+
+| Nearline | El almacenamiento Nearline es un servicio de almacenamiento de bajo coste y gran durabilidad para el almacenamiento de datos a los que se accede con poca frecuencia. 
+
+
+| Coldline | Coldline storage es un servicio de almacenamiento de muy bajo coste y muy duradero para almacenar datos a los que se accede con poca frecuencia. 
+
+
+| Archivado | El almacenamiento de archivado es el servicio de almacenamiento de menor coste y gran durabilidad para archivado de datos, backup online y recuperación ante desastres. 
+
+
+| Autoclase | Autoclass transfiere automáticamente los objetos de su bucket a las clases de almacenamiento adecuadas en función del patrón de acceso de cada objeto. 
+|===
++
+Los costos y las tarifas de recuperación son diferentes para cada clase de almacenamiento. https://cloud.google.com/storage/docs/storage-classes["Consulte la documentación de Google Cloud para obtener más información sobre las clases de almacenamiento"^].
+
+. En la sección _Protection_, elija si desea usar alguna herramienta de protección de datos para proteger los objetos del depósito o cualquier configuración de cifrado de datos para proteger el acceso a los datos.
++
+[cols="25,75"]
+|===
+| Protección de datos | Descripción 
+
+
+| Ninguno | De forma predeterminada, no hay herramientas de protección habilitadas en el bloque. 
+
+
+| Control de versiones de objetos  a| 
+El depósito conservará una versión de objeto no corriente cada vez que actualice, reemplace o elimine una versión de objeto activo, manteniendo continuamente una versión protegida del objeto. Al seleccionar «Control de versiones de objetos» puede especificar dos opciones:
+
+** *Max. Número de versiones por objeto*: Introduzca el número de versiones no actuales por objeto que se creará.
+** * Expire las versiones no actuales después de * - Introduzca el número de días después de los cuales se eliminarán los objetos antiguos y no actuales.
+
+
+
+
+| Política de retención  a| 
+Una política de retención garantiza que todos los objetos actuales y futuros del depósito no se puedan eliminar ni reemplazar hasta que alcancen la antigüedad definida en la política de retención. Al seleccionar «Política de retención» puede especificar dos opciones:
+
+** * Retener objetos para * - Introduzca el número de segundos, días, meses o años que los objetos serán retenidos.
+** *Marco de tiempo* - Seleccione si el tiempo es en segundos, días, meses o años.
+
+
+|===
++
+Las herramientas de protección de políticas de retención y control de versiones de objetos no se pueden habilitar al mismo tiempo. Consulte la documentación de Google Cloud para https://cloud.google.com/storage/docs/object-versioning["más información sobre el control de versiones de objetos"^], y. https://cloud.google.com/storage/docs/bucket-lock["más información sobre políticas de retención"^].
+
++
+[cols="25,75"]
+|===
+| Cifrado de datos | Descripción 
+
+
+| Clave de cifrado gestionada por Google | De forma predeterminada, las claves de cifrado gestionadas por Google se utilizan para cifrar sus datos. 
+
+
+| Clave de cifrado gestionada por el cliente (CMEK)  a| 
+Puede utilizar sus propias claves gestionadas por el cliente para el cifrado de datos en lugar de utilizar las claves de cifrado predeterminadas gestionadas por Google. Si está planeando utilizar sus propias claves gestionadas por el cliente, deberá haberlas creado ya para que pueda seleccionar las claves en esta página.
+
+Las claves pueden estar en el mismo proyecto que el depósito, o puede seleccionar un proyecto diferente.
+
+|===
++
+Consulte la documentación de Google Cloud para https://cloud.google.com/storage/docs/encryption/default-keys["Más información sobre las claves de cifrado gestionadas por Google"^], y. https://cloud.google.com/storage/docs/encryption/customer-managed-keys["Más información sobre las claves de cifrado gestionadas por el cliente"^].
+
+. Haga clic en *Agregar* y se creará el cubo.
+

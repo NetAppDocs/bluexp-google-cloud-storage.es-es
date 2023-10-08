@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bluexp-google-cloud-storage | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/es-es/bluexp-google-cloud-storage/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/es-es/bluexp-google-cloud-storage</link>
+    <description>The latest updates from NetApp Documentation</description>
+    <language>es-es</language>
+    <ttl>60</ttl>
+    <pubDate>Sun, 08 Oct 2023 14:56:45 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Oct 2023 14:56:45 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>Novedades de Google Cloud Storage en BlueXP (10 Jul 2023)</title>
+      <pubDate>Mon, 10 Jul 2023 14:59:31 +0000</pubDate>
+      <link>https://docs.netapp.com/es-es/bluexp-google-cloud-storage/whats-new.html?time=1689001171</link>
+      <guid isPermaLink="false">Mon, 10 Jul 2023 14:59:31 +0000</guid>
+      <description><![CDATA[ Descubre las novedades de Google Cloud Storage en BlueXP. ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>

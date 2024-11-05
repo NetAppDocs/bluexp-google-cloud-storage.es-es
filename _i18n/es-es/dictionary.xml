@@ -280,7 +280,6 @@
   <block id="145634d473d937448dc7bdb5a6797ea7" category="section-title">10 de julio de 2023</block>
   <block id="5a6d96b9a020e520981bf7fe4c7af203" category="section-title">Capacidad para añadir nuevos bloques y gestionar bloques existentes desde BlueXP</block>
   <block id="2706c3785e1f78099c28d555600c918b" category="inline-link">Descubre cómo añadir nuevos buckets de Google Cloud Storage</block>
-  <block id="71d86d6b260e92b047d7453cd653bd4c" category="paragraph">Has tenido la capacidad de ver buckets de almacenamiento de Google Cloud en BlueXP Canvas durante bastante tiempo. Ahora puede agregar nuevos cubos y cambiar las propiedades de los cubos existentes directamente desde BlueXP.<block ref="df1f25cc6ac4c2f26feeca1367b4ae92" category="inline-link-rx"></block>.</block>
   <block id="b83e711561263aa7a3404d6bb2624f6e" category="sidebar">Documentos de Google Cloud Storage</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de la versión</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
@@ -334,4 +333,5 @@
   <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">Es necesario asociar las credenciales del sitio de soporte de NetApp con su organización de BlueXP  para habilitar los siguientes flujos de trabajo clave para Cloud Volumes ONTAP:</block>
   <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">La asociación de credenciales de NSS a la organización de BlueXP  es diferente de la cuenta de NSS asociada con un inicio de sesión de usuario de BlueXP .</block>
   <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">Estas credenciales de NSS están asociadas con su ID de organización de BlueXP  específico. Los usuarios que pertenecen a la organización BlueXP  pueden acceder a estas credenciales desde *Soporte &gt; Administración de NSS*.</block>
+  <block id="4d1dd60706cede8204b5a6edb14f8ff5" category="paragraph">Has tenido la capacidad de ver buckets de almacenamiento de Google Cloud en BlueXP Canvas durante bastante tiempo. Ahora puede agregar nuevos cubos y cambiar las propiedades de los cubos existentes directamente desde BlueXP .<block ref="a727375f2b80e544cee46379a3fbce4b" category="inline-link-rx"></block>.</block>
 </blocks>

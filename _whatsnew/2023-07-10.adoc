@@ -1,24 +1,6 @@
----
-sidebar: sidebar 
-permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
-summary: Descubre las novedades de Google Cloud Storage en BlueXP. 
----
-= Novedades de Google Cloud Storage en BlueXP
-:hardbreaks:
+= Capacidad para añadir nuevos bloques y gestionar bloques existentes desde BlueXP
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
-
-[role="lead"]
-Descubre las novedades de Google Cloud Storage en BlueXP.
-
-
-
-== 10 de julio de 2023
 
 
 

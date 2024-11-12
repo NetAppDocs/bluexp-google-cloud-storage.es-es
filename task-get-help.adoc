@@ -7,9 +7,10 @@ summary: 'NetApp ofrece soporte para BlueXP de diversas maneras. Hay disponibles
 = Obtenga ayuda
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
+[role="lead"]
 NetApp ofrece soporte para BlueXP y sus servicios cloud de diversas maneras. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.
 
 

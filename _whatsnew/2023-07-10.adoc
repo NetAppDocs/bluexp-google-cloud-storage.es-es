@@ -1,5 +1,7 @@
 = Capacidad para añadir nuevos bloques y gestionar bloques existentes desde BlueXP
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 
